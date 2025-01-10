@@ -1,27 +1,16 @@
-# openweatherapi
+1. Заходим на сайт openweathermap.org
+![image1](https://github.com/vasiliza2/proga_5_LR2/blob/9234791e352b3509b5c99b88d220b69abbd40f7b/image.png)
 
-## Описание задачи
-Написать реализацию функции  ```get_weather_data(place, api_key=None)``` (в модуле ```getweatherdata```), в которой необходимо получить данные о погоде с сайта https://openweathermap.org/. 
+2. Создаем api.
+ ![image2](https://github.com/vasiliza2/proga_5_LR2/blob/1bac97abc92f0b750610e83347b1e17da8bb9606/image2.png)
 
-Функция должна возвращать объект в формате JSON, включающий: 
-- информацию о названии города (в контексте openweathermap),
-- код страны (2 символа),
-- широту и долготу, на которой он находится,
-- его временной зоне,
-- а также о значении температуры (как она ощущается).
+3.Модуль getweatherdata.py с функцией для URL запроса к API
+openweathermap.org и формирования json ответа.
+![image3](https://github.com/vasiliza2/proga_5_LR2/blob/1bac97abc92f0b750610e83347b1e17da8bb9606/image3.png)
 
-Значение временной зоны выводить в формате UTC±N, где N - цифра временного сдвига.
-Протестировать выполнение программы со следующими городами: Чикаго, СПб, Дакка.
+4.main.py файл для запуска модуля getweatherdata.py
+![image4](https://github.com/vasiliza2/proga_5_LR2/blob/1bac97abc92f0b750610e83347b1e17da8bb9606/image4.png)
 
-Пример вызова функции и получаемого результата.
+5. Результат работы функции:
 
-```python
-get_weather_data('Kiev', api_key=key)
->>> {"name": "Kyiv", "coord": {"lon": 30.52, "lat": 50.43}, "country": "UA", "feels_like": 21.96, "timezone": "UTC+3"}
-
-```
-
-При реализации программы, не публикуйте свой ключ для осуществления запросов. Сразу же после создания борда в реплите, используйте вкладку слева "secrets"), а при публикации кода в гитхабе — исключите из коммитов подключаемый файл, где разместите ключ, с помощью ```.gitignore```.
-Для организации запросов используйте модуль ```requests```. Для кодирования и декодирования ```json``` - одноименный модуль.
-
-Ссылка про secrets: https://docs.replit.com/programming-ide/storing-sensitive-information-environment-variables
+![image5](https://github.com/vasiliza2/proga_5_LR2/blob/1bac97abc92f0b750610e83347b1e17da8bb9606/image5.png)
